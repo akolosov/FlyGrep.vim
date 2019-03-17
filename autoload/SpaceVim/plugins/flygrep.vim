@@ -550,10 +550,10 @@ function! s:complete_input_history(str,num) abort
   endif
 endfunction
 let s:MPT._function_key = {
-      \ "\<Tab>" : function('s:next_item'),
+      \ "\<Down>" : function('s:next_item'),
       \ "\<C-j>" : function('s:next_item'),
       \ "\<ScrollWheelDown>" : function('s:next_item'),
-      \ "\<S-tab>" : function('s:previous_item'),
+      \ "\<Up>" : function('s:previous_item'),
       \ "\<C-k>" : function('s:previous_item'),
       \ "\<ScrollWheelUp>" : function('s:previous_item'),
       \ "\<Return>" : function('s:open_item'),
@@ -563,8 +563,8 @@ let s:MPT._function_key = {
       \ "\<M-r>" : function('s:start_replace'),
       \ "\<C-p>" : function('s:toggle_preview'),
       \ "\<C-e>" : function('s:toggle_expr_mode'),
-      \ "\<Up>" : function('s:previous_match_history'),
-      \ "\<Down>" : function('s:next_match_history'),
+      \ "\<D-Up>" : function('s:previous_match_history'),
+      \ "\<D-Down>" : function('s:next_match_history'),
       \ "\<PageDown>" : function('s:page_down'),
       \ "\<PageUp>" : function('s:page_up'),
       \ "\<C-End>" : function('s:page_end'),
