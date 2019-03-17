@@ -406,7 +406,11 @@ function! s:open_item() abort
     endif
     let s:preview_able = 0
     noautocmd q
-    exe 'e ' . filename
+    if exists('g:tab_mode')
+      exe 'silent tabe ' . filename
+    else
+      exe 'silent e ' . filename
+    endif
     call cursor(linenr, colum)
     noautocmd normal! :
   endif
